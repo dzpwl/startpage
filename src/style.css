@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css2?family=Courier+Prime);
+:root {
+  --body-bg-color:    #222;
+  --content-bg-color: #2c3333;
+  --text-color-sm:    #0e8388;
+  --text-color-hl:    #e49393;
+  --text-color-lg:    #cbe4ed;
+  --content-glow:     0px 0px 8px #e49393;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: "Courier Prime", monospace;
+  background-color: var(--body-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li::marker {
+  content: '';
+}
+
+a {
+  color: var(--text-color-sm);
+  text-decoration: none;
+  transition: color 400ms;
+}
+
+a:hover {
+  color: var(--text-color-hl);
+  transition: color 400ms;
+}
+
+h3 {
+  color: var(--text-color-lg);
+  padding-bottom: 1rem;
+}
+
+li {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+label {
+  color: var(--text-color-lg);
+}
+
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: var(--text-color-hl);
+  caret-color: #aaaa;
+}
+
+input::placeholder {
+  color: #aaaa;
+}
+
+::selection {
+  background: #fff2;
+  color: #123;
+}
+
+.main-container {
+  background: var(--content-bg-color);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  box-shadow: var(--content-glow);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 620px;
+  gap: 2rem;
+}
+
+.image-container {
+  display: flex;
+  margin: 0 2rem;
+  padding-top: 2rem;
+  overflow: hidden;
+  height: 100%;
+  width: 15vw;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding-top: 2rem;
+  margin-left: 1.5rem;
+  padding-right: 2rem;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.list {
+  padding-bottom: 1rem;
+}
+
+.list:last-child {
+  padding-bottom: 0;
+}
+
+#search {
+  margin: 0 auto;
+  padding: 2rem 0;
+}
